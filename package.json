@@ -1,0 +1,40 @@
+{
+  "name": "api",
+  "version": "0.1.0",
+  "description": "API para proyecto de residencia",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaulCarvajal/api_residencia.git"
+  },
+  "keywords": [
+    "API",
+    "mongodb",
+    "mongoose",
+    "express",
+    "node",
+    "proyecto",
+    "residencia"
+  ],
+  "author": "TECNOAP/viaRaulCarvajalITTEPIC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaulCarvajal/api_residencia/issues"
+  },
+  "homepage": "https://github.com/RaulCarvajal/api_residencia#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "http-status": "^1.3.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.4.19",
+    "qrcode": "^1.3.3",
+    "underscore": "^1.9.1",
+    "wagner-core": "^0.2.0"
+  }
+}
