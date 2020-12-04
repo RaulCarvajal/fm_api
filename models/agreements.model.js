@@ -61,6 +61,9 @@ const contratoSchema = new mongoose.Schema({
     divisa : {
         type : String,
         required : true
+    },
+    clientAdmin : {
+        type :  mongoose.Schema.Types.ObjectId
     }
 });
 

@@ -11,7 +11,7 @@ module.exports = (wagner) => {
         clienteCtrl.saveClient(req,res);
     });
     //getContratoById
-    clienteRouter.get("/get",(req,res)=>{
+    clienteRouter.get("/get/:aid",(req,res)=>{
         clienteCtrl.getClients(req,res);
     });
     //getContratoByClient

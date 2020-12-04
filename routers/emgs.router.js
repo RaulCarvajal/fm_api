@@ -4,7 +4,7 @@ module.exports = (wagner) => {
     const emgsCtrl = wagner.invoke((Emg)=>require('../controllers/emg.controller')(Emg))
 
     //Get todos
-    emgsRouter.get("/getall",(req,res)=>{
+    emgsRouter.get("/getall/:aid",(req,res)=>{
         emgsCtrl.getAll(req,res);
     });
     //Get by id

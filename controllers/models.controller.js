@@ -42,7 +42,8 @@ const getById = (req, res) => {
 }
 //Obtener todos
 const get = (req, res) => {
-    _models.find()
+    let aid = req.params.aid;
+    _models.find({clientAdmin : aid})
         .then(agreement => {
             res.status(200);
             res.json({

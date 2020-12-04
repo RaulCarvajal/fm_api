@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 //Building schema for users
-const userSchema = new mongoose.Schema({
+const client_adminSchema = new mongoose.Schema({
     username : {
         type : String,
         required :true
@@ -9,10 +9,6 @@ const userSchema = new mongoose.Schema({
     password : {
         type : String,
         required :true
-    },
-    role : {
-        type : Number,
-        required : true
     },
     info : {
         name : {
@@ -37,37 +33,16 @@ const userSchema = new mongoose.Schema({
         required : true,
         default : false
     },
-    permissions : {
-        emg : {
-            type : Boolean,
-            required : true
-        },
-        tecnicos  : { 
-            type : Boolean,
-            required : true
-        },
-        clientes : {
-            type : Boolean,
-            required : true
-        }
-    },
     meta : {
-        registred_by : {
-            type :  mongoose.Schema.Types.ObjectId,
-            require : true
-        },
         registred_date : {
-            type : Date,
+            type : Date, 
             required : true,
             default : Date.now
         }
-    },
-    clientAdmin : {
-        type :  mongoose.Schema.Types.ObjectId
     }
 });
  
 //Setting collection name and model
-const userModel = mongoose.model('User2', userSchema, 'users2');
+const client_adminModel = mongoose.model('Client_admin', client_adminSchema, 'client_admin');
 
-module.exports = userModel;
+module.exports = client_adminModel;

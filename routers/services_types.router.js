@@ -13,7 +13,7 @@ module.exports = (wagner) => {
         stCtrl.delType(req,res);
     });
     //getTypes
-    stRouter.get("/getst",(req,res)=>{
+    stRouter.get("/getst/:aid",(req,res)=>{
         stCtrl.getTypes(req,res);
     });
     //Actualizar

@@ -10,6 +10,9 @@ const fechaSchema = new mongoose.Schema({
     value : {
         type : Boolean,
         require : true
+    },
+    clientAdmin : {
+        type :  mongoose.Schema.Types.ObjectId
     }
 });
 

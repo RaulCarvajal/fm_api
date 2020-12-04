@@ -2,7 +2,8 @@ let _tipos
 
 //getTypes
 const getTypes = (req, res) => {
-    _tipos.find({ status : true })
+    let aid = req.params.aid;
+    _tipos.find({ status : true, clientAdmin : aid })
         .then(types => {
             res.status(200);
             res.json({
@@ -62,7 +63,6 @@ const delType = (req, res) => {
             });
         });    
 };
-
 const actType = (req, res) => {
     const name = req.params.name;
     _tipos.update(

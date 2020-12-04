@@ -17,6 +17,9 @@ const namespacesSchema = new mongoose.Schema({
     status : {
         type : Boolean,
         default : true
+    },
+    clientAdmin : {
+        type :  mongoose.Schema.Types.ObjectId
     }
 });
  

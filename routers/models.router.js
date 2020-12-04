@@ -13,7 +13,7 @@ module.exports = (wagner) => {
         modelsCtrl.getById(req,res);
     });
     //get
-    configsRouter.get("/get",(req,res)=>{
+    configsRouter.get("/get/:aid",(req,res)=>{
         modelsCtrl.get(req,res);
     });
 

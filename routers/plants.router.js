@@ -13,7 +13,7 @@ module.exports = (wagner) => {
         plantCtrl.addLine(req,res);
     });
     //Get plantas
-    plantsRouter.get("/getall",(req,res)=>{
+    plantsRouter.get("/getall/:aid",(req,res)=>{
         plantCtrl.getAll(req,res);
     });
     //Get plantas por cliente

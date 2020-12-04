@@ -55,6 +55,9 @@ const plantsSchema = new mongoose.Schema({
             required : true,
             default : Date.now
         }
+    },
+    clientAdmin : {
+        type :  mongoose.Schema.Types.ObjectId
     }
 });
 

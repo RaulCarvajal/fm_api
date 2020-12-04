@@ -46,7 +46,8 @@ const addLine = (req, res) => {
 }
 //GetAll
 const getAll = (req, res) => {
-    _plant.find({})
+    const aid = req.params.aid;
+    _plant.find({ clientAdmin : aid})
         .then(plants => {
             res.status(200);
             res.json({

@@ -17,6 +17,9 @@ const modelsSchema = new mongoose.Schema({
     enlaces : {
         type : String,
         required : false
+    },
+    clientAdmin : {
+        type :  mongoose.Schema.Types.ObjectId
     }
 });
  

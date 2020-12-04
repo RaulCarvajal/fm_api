@@ -122,7 +122,8 @@ const login = (req, res) => {
 };
 //Get users
 const getAll = (req, res) => {
-    _user.find({})
+    let aid = req.params.aid;
+    _user.find({clientAdmin : aid})
         .then(users => {
             res.status(200);
             res.json({
@@ -159,7 +160,8 @@ const getById = (req, res) => {
 }
 //Get users tec
 const getTec = (req, res) => {
-    _user.find({role : 1},'info')
+    let aid = req.params.aid;
+    _user.find({role : 1, clientAdmin : aid},'info')
         .then(users => {
             res.status(200);
             res.json({
@@ -177,7 +179,8 @@ const getTec = (req, res) => {
 };
 //Get users admin
 const getAdmin = (req, res) => {
-    _user.findOne({role : 0},'info')
+    let aid = req.params.aid;
+    _user.findOne({role : 0,clientAdmin : aid},'info')
         .then(users => {
             res.status(200);
             res.json({
@@ -195,7 +198,8 @@ const getAdmin = (req, res) => {
 };
 //Get users clients
 const getClients = (req, res) => {
-    _user.find({role : 2})
+    let aid = req.params.aid;
+    _user.find({role : 2,clientAdmin : aid})
         .then(users => {
             res.status(200);
             res.json({
@@ -213,7 +217,8 @@ const getClients = (req, res) => {
 };
 //Get users clients names
 const getClientsNames = (req, res) => {
-    _user.find({role : 2},'info.name')
+    let aid = req.params.aid;
+    _user.find({role : 2,clientAdmin : aid},'info.name')
         .then(users => {
             res.status(200);
             res.json({

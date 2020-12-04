@@ -23,7 +23,8 @@ const add = (req, res) => {
 };
 //Get last
 const get = (req, res) => {
-    _namespaces.findOne({ status : true })
+    let aid = req.params.aid;
+    _namespaces.findOne({ status : true, clientAdmin : aid })
         .then(namespace => {
             res.status(200);
             res.json({
@@ -42,11 +43,11 @@ const get = (req, res) => {
 //Update
 const update = (req, res) => {
     _namespaces.updateOne({ _id : req.body._id },
-        {
-            planta : req.body.planta,
-            linea : req.body.linea,
-            equipo : req.body.equipo
-        }
+            {
+                planta : req.body.planta,
+                linea : req.body.linea,
+                equipo : req.body.equipo
+            }
         )
         .then(data => {
             res.status(200);

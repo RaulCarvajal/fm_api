@@ -108,6 +108,15 @@ const servicesSchema = new mongoose.Schema({
     },
     enlaces : {
         type : String
+    },
+    imgs : [
+        {
+            required : false,
+            type : String
+        }
+    ],
+    clientAdmin : {
+        type :  mongoose.Schema.Types.ObjectId
     }
 });
 

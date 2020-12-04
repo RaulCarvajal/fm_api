@@ -25,7 +25,8 @@ const saveClient = (req, res) => {
 
 //Get Clients
 const getClients = (req, res) => {
-    _clients.find()
+    let aid = req.params.aid;
+    _clients.find({ clientAdmin : aid })
         .then(agreements => {
             res.status(200);
             res.json({

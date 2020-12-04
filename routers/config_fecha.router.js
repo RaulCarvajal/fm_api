@@ -13,7 +13,7 @@ module.exports = (wagner) => {
         configCtrl.change(req,res);
     });
     //getFecAnt
-    configsRouter.get("/getfech",(req,res)=>{
+    configsRouter.get("/getfech/:aid",(req,res)=>{
         configCtrl.getFecAnt(req,res);
     });
 

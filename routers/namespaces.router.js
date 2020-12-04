@@ -10,7 +10,7 @@ module.exports = (wagner) => {
     });
     
     //Get
-    namespacesRouter.get("/get",(req,res)=>{
+    namespacesRouter.get("/get/:aid",(req,res)=>{
         namespacesCntrl.get(req,res);
     });
 

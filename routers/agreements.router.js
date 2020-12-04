@@ -1,5 +1,5 @@
 const agreementRouter =  require('express').Router();
-
+ 
 //saveContrato, getContratoById, getContratoByClient, getContratoByEmg, getContratos, addEmg
 
 module.exports = (wagner) => { 
@@ -19,10 +19,10 @@ module.exports = (wagner) => {
         agreementControllers.getContratoByClient(req,res);
     });
     //getContratos
-    agreementRouter.get("/getcontratos",(req,res)=>{
+    agreementRouter.get("/getcontratos/:aid",(req,res)=>{
         agreementControllers.getContratos(req,res);
     })
-    agreementRouter.get("/getcontratosactivos",(req,res)=>{
+    agreementRouter.get("/getcontratosactivos/:aid",(req,res)=>{
         agreementControllers.getContratosActivos(req,res);
     })
     agreementRouter.get("/getcontratosactivosbyclient/:id",(req,res)=>{

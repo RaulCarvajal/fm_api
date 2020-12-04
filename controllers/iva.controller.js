@@ -2,8 +2,8 @@ let _iva
 
 //Get fecha
 const getUltIva = (req, res) => {
-    _iva.findOne()
-        .sort({ last_mod : -1 })
+    const aid = req.params.aid;
+    _iva.findOne({clientAdmin : aid})
         .then(fecant => {
             res.status(200);
             res.json({

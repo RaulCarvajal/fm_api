@@ -10,6 +10,9 @@ const tiposSchema = new mongoose.Schema({
         type : Boolean,
         required : true,
         default : true
+    },
+    clientAdmin : {
+        type :  mongoose.Schema.Types.ObjectId
     }
 });
 

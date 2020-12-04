@@ -9,7 +9,7 @@ module.exports = (wagner) => {
         ivaCntrlr.saveIva(req,res);
     });
     //getFecAnt
-    configsRouter.get("/getiva",(req,res)=>{
+    configsRouter.get("/getiva/:aid",(req,res)=>{
         ivaCntrlr.getUltIva(req,res);
     });
 

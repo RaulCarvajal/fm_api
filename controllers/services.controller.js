@@ -7,7 +7,8 @@ let _service;
 
 //get todos los servicios
 const getAll = (req, res) => {
-    _service.find({})
+    let aid = req.params.aid;
+    _service.find({ clientAdmin : aid })
         .then(services => {
             res.status(200);
             res.json({
@@ -211,7 +212,8 @@ const finalizarServicio = (req, res) => {
                                         'payment.divisa' : data.divisa,                                        
                                         'payment.total' : data.total,
                                         conceptos : data.conceptos,
-                                        enlaces : data.enlaces                
+                                        enlaces : data.enlaces,
+                                        imgs : data.imgs                
                                     }})
         .then(data =>{
             res.status(200);

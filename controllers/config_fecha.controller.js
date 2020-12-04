@@ -2,7 +2,8 @@ let _config_fecha
 
 //Get fecha
 const getFecAnt = (req, res) => {
-    _config_fecha.findOne({ name : "fecha" })
+    const aid = req.params.aid;
+    _config_fecha.findOne({ clientAdmin : aid })
         .then(fecant => {
             res.status(200);
             res.json({
@@ -41,7 +42,7 @@ const setFech = (req, res) => {
 //Change value
 const change = (req, res) => {
     const value = req.body;
-    _config_fecha.update({ name : "fecha" },{ value : value.value})
+    _config_fecha.update({ clientAdmin : value.aid },{ value : value.value})
         .then(data =>{
             console.log(data);
             res.status(200);

@@ -59,6 +59,9 @@ const emgSchema = new mongoose.Schema({
     img : {
         required : false,
         type : String
+    },
+    clientAdmin : {
+        type :  mongoose.Schema.Types.ObjectId
     }
 });
 

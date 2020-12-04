@@ -5,7 +5,7 @@ module.exports = (wagner) => {
     const serviceCtrl = wagner.invoke((Service) => require('../controllers/services.controller')(Service));
 
     //Todos los servicios
-    serviceRouter.get("/getall",(req,res)=>{
+    serviceRouter.get("/getall/:aid",(req,res)=>{
         serviceCtrl.getAll(req,res);
     });
     //Servicios por cliente

@@ -3,7 +3,8 @@ let _emg
 
 //Get todos
 const getAll = (req, res) => {
-    _emg.find({})
+    const aid = req.params.aid;
+    _emg.find({ clientAdmin : aid})
         .then(emgs => {
             res.status(200);
             res.json({
@@ -237,7 +238,6 @@ const edit = (req, res) => {
             });
         }); 
 }
-
 module.exports = (Emg) => {
     _emg = Emg;
     return ({

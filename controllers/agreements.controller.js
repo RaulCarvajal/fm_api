@@ -1,4 +1,4 @@
-let _agreement
+let _agreement 
 
 //saveContrato
 const saveContrato = (req, res) => {
@@ -84,7 +84,8 @@ const getContratoByEmg = (req, res) => {
 
 //getContratos
 const getContratos = (req, res) => {
-    _agreement.find()
+    const aid = req.params.aid;
+    _agreement.find({ clientAdmin : aid })
         .then(agreements => {
             res.status(200);
             res.json({
@@ -102,7 +103,8 @@ const getContratos = (req, res) => {
 }
 
 const getContratosActivos = (req, res) => {
-    _agreement.find({ status : true })
+    const aid = req.params.aid;
+    _agreement.find({ status : true, clientAdmin : aid })
         .then(agreements => {
             res.status(200);
             res.json({
